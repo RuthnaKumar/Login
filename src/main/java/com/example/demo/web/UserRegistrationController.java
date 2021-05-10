@@ -12,6 +12,7 @@ import com.example.demo.web.dto.UserRegistrationDto;
 
 
 @Controller
+
 @RequestMapping("/registration")
 public class UserRegistrationController {
 	
@@ -38,9 +39,12 @@ public class UserRegistrationController {
 	public String registerUserAccount(@ModelAttribute("user") UserRegistrationDto registrationDto) 
 	{
 		userService.save(registrationDto);
-		return "redirect:/registration?success";
+		return "index2";
 	}
 	
-
+	
 }
+	
+
+
 
